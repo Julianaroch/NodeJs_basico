@@ -7,7 +7,7 @@ app.get('/', (req, res) => {
     res.send(`
     <form action="/" method="POST">
     Nome do cliente: <input type="text" name="nome">
-    <button> Olá Mundo </button>
+    <button> Click Aqui </button>
     </form>`);
 });
 
@@ -18,7 +18,7 @@ app.get('/testes/:idUsuarios', (req, res)=>{
 });
 
 app.post('/', (req, res) => {
-    res.send('Recebi o formulário');
+    res.sendFile(__dirname + '/index.html')
 });
 
 app.listen(3000, () => {
